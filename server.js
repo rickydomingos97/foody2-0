@@ -41,6 +41,11 @@ server.get("/not-found", (req,res) => {
 
     console.log(recipes[recipeIndex])
 }) */
-server.listen(5200, () => {
-    console.log("server is running on 5200 port")
+
+server.use((req, res) => {
+    res.status(404).render("not-found")
+})
+
+server.listen(5000, () => {
+    console.log("server is running on 5000 port")
 })

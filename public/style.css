@@ -178,3 +178,31 @@ footer {
     padding-top: 26px;
     margin-top: 4.6%;
 }
+
+.notfoundcontent {
+    display: flex;
+    color: var(--color-secondary-text);
+    font-size: 54px;
+    align-items: center;
+    margin: 10px auto;
+    margin: 0 auto;
+    background: rgb(31, 31, 31);
+    height: 100%;
+}
+
+.notfoundcontent p{
+    display: flex;
+    color: var(--color-background-secondary);
+    font-size: 54px;
+    align-items: center;
+    margin: 10px auto;
+    margin: 0 auto;
+    max-width: 20px;
+}
+
+.notfoundcontent img {
+    display: flex;
+    margin: 0 auto;
+    padding: 100px 0;
+    height: 100%;
+}

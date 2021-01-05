@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/about.css">
+    <link rel="stylesheet" href="/recipe.css">
+    <title>Foody</title>
+</head>
+
+<body class="page-landing">
+    <div class="container">
+        <header>
+            <a href="/"><img src="/logo.png" alt="logo Foody" href="/"></a>
+            <nav class="links">
+                <a href="/about">Sobre</a>
+                <a href="/recipe">Receitas</a>
+            </nav>
+        </header>
+
+
+        {% block content %}{% endblock %}
+
+        
+        <footer class="footer-site">
+            <p>Todos direitos reservados, receitas Foodfy. @ricardodomingosofficiel</p>
+        </footer>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
