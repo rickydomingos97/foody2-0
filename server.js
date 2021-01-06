@@ -6,7 +6,7 @@ const server = express()
 server.use(express.static('public'))
 server.use(express.static('images'))
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 nunjucks.configure("views", {
 	express: server
