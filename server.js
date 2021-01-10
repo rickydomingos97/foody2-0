@@ -3,6 +3,8 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
+const receitas = require("./data")
+
 server.use(express.static('public'))
 server.use(express.static('images'))
 
@@ -13,7 +15,7 @@ nunjucks.configure("views", {
 })
 
 server.get("/", (req, res) => {
-    return res.render("index")
+    return res.render("index", { items: receitas})
 })
 
 server.get("/about", (req,res) => {
@@ -35,12 +37,12 @@ server.get("/not-found", (req,res) => {
     return res.render("not-found")
 })
 
-/* server.get("/recipes/:index", (req, res) => {
+server.get("/recipes/:index", (req, res) => {
     const recipes = []; //Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
 
     console.log(recipes[recipeIndex])
-}) */
+})
 
 server.use((req, res) => {
     res.status(404).render("not-found")

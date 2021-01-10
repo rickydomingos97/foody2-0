@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --color-background: #fff;
+    --color-background: ffffff;
     --color-background-secondary: #FBDFDB ;
+    --color-background-dark-mode: #191e24 ;
     --color-primary-text: #111111;
     --color-secondary-text: #777777;
-    --color-footer: #EEEEEE;
+    --color-footer: #d1cece;
     --color-background-white: #ffffff;
     --color-background-close-modal: #d3d3d3;
 }
@@ -35,6 +36,7 @@ header {
 }
 
 #recipe,
+#links,
 #sobre-links,
 #home {
     font-weight: 700;
