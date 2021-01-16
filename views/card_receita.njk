@@ -1,0 +1,11 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<h1>{{item.title}}</h1>
+
+{% for item in items %}
+
+<p>{{ item.title }}</p>
+{% endfor %}
+{% endblock %}

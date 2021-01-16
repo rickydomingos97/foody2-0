@@ -1,9 +1,9 @@
-{% extends "layout.njk"%}
+{% extends "layout.njk" %}
 
 {% block content %}
 
         <div class="cards_recipies">
-
+        
         <section class="cards">
             {% for item in items %}
             <div class="card" id="{{ items.indexOf(item) }}">
@@ -20,19 +20,4 @@
             {% endfor %}
         </section>
 
-{#         <div class="modal-overlay">
-            <div class="modal">
-                <a class="close-modal">
-                    <i class="material-icons"></i>Fechar modal</a>
-                <div class="modal-content">
-                    <img src="" alt="" id="modal_image" class="small-image-modal">
-
-                    <h4 class="card_content"></h4>
-
-                    <p class="card_info"></p>
-
-                </div>
-            </div>
-        </div> #}
-
- {% endblock %}
+{% endblock %}

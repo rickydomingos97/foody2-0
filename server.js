@@ -21,12 +21,12 @@ server.get("/", (req, res) => {
 server.get("/about", (req,res) => {
     return res.render("about")
 })
-server.get("/receitas", (req, res) => {
-    return res.render("receitas")
+server.get("/recipes", (req, res) => {
+    return res.render("recipes", { items: receitas})
 })
 
 server.get("/recipe", (req,res) => { 
-    return res.render("recipe")
+    return res.render("recipe", { items: receitas})
 })
 
 server.get("/layout", (req,res) => {
@@ -38,11 +38,16 @@ server.get("/not-found", (req,res) => {
 })
 
 server.get("/recipes/:index", (req, res) => {
-    const recipes = []; //Array de receitas carregadas do data.js
-    const recipeIndex = req.params.index;
+    const recipes = [] //Array de receitas carregadas do data.js
+    const recipeIndex = req.params.index; // pegando o index do item no array
 
     console.log(recipes[recipeIndex])
+    return res.render("recipes", { items: recipes})
+
+
+
 })
+
 
 server.use((req, res) => {
     res.status(404).render("not-found")

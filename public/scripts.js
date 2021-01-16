@@ -1,32 +1,14 @@
-const modalOverlay = document.querySelector('.modal-overlay')
-let cards = document.querySelectorAll('.card')
+const receitas = document.querySelectorAll('.card')
 
-let imagens = document.querySelectorAll('.small_image')
-let modal = document.querySelector('.modal')
-let modalImg = document.querySelector('#modal_image')
+for(let receita of receitas){
+    receita.addEventListener("click", ()=> {
 
-for(let card of cards) {
-    card.addEventListener("click", function(){
-        modalOverlay.classList.add('active')
-
-        const nomeDaReceita = card.getElementsByTagName("h4")[0].textContent
-        modalOverlay.querySelector('h4').innerHTML = `${nomeDaReceita }`
-
-        const nomeDoChef = card.getElementsByTagName("p")[0].textContent
-        modalOverlay.querySelector('p').innerHTML = `${nomeDoChef }`
-
-
+        const urlID = receita.getAttribute("id")
+        
+        window.location.href = `/recipes/${urlID}`
+        
     })
 }
-
-
-document.querySelector(".close-modal").addEventListener("click", function(){
-    modalOverlay.classList.remove('active')
-})
-
-for (let i = 0; i<imagens.length; i++){
-    imagens[i].addEventListener('click', function(){
-        srcVal = imagens[i].getAttribute('src')
-        modalImg.setAttribute('src', srcVal)
-    })
-}
+// Eu criei uma variavel receitas
+// depois dentro de um laco for criei um array que vai puxar o id das receitas do data
+//e quando clicado vai abrir uma janela de recipes com o indexOf das receitas dentro do array do data.js
