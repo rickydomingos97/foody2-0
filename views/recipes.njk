@@ -5,6 +5,7 @@
         <div class="cards_recipies">
         
         <section class="cards">
+
             {% for item in items %}
             <div class="card" id="{{ items.indexOf(item) }}">
                 <div class="card_image-container">
@@ -18,6 +19,7 @@
                 </div>
             </div>
             {% endfor %}
+
         </section>
 
 {% endblock %}
