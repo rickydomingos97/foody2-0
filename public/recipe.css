@@ -1,92 +1,113 @@
-/* === MODAL ===  */
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.87);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.3s linear, opacity 0.3s linear;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal {
-    background-color: var(--color-background-white);
-    width: 660px;
-    height: 473px;
-    position: relative;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-}
-/* O position: relative; foi colocado no "pai" da classe filha para poder ser usado o position; absolute; nela*/
-.modal .close-modal{
-    position: absolute;
-    color: var(--color-secondary-text);
-    margin: 430px auto;
-    margin-bottom: 1%;
-    text-align: center;
-    cursor: pointer;
-    transition: .3s;
-    font-weight: 100;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal .close-modal:hover {
-    color: var(--color-primary-text);
-    
-}
-
-/* === MODAL ACTIVE===  */
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;/* para tornar visivel o X do modal-close*/
-}
-
-.modal img {
+.recipe {
     max-width: 900px;
-    max-height: 280px;
-    /* width: auto;
-    height: auto; */
-    object-fit: cover;
-    margin: 3.9% 2.1%;
+    margin: auto;
+}
+
+.recipe-image-container {
+    max-width: 900px;
+}
+
+.recipe-image-container img {
     border-radius: 15px;
-    transition: all linear .3s
+    width: 100%;
+
+
 }
 
-.modal-content {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.recipe-content {
+    padding: 2rem 3.2rem;
+    text-align: center;
+    color: var(--color-secondary);
 }
 
-.modal-content p {
-    margin-top: .8%;
+.recipe-content h1 {
+    line-height: 4.2rem;
+    font-size: 36px;
 }
 
-.modal-content h4 {
-    font-size: 18px;
+.recipe-content p {
+    font-size: 20px;
     font-weight: 100;
-    margin-top: 1.5%;
-    margin-bottom: 0.5%;
+    line-height: 22px;
+    color:var(--color-secondary-text);
 }
 
-.small_image:hover {
-    filter: grayscale(0%);
-    transition: .2s;
-    transform: scale(1.1);
+.recipe-info {
+    margin: 1.5rem 0 4.2rem;
+}
+
+.topic-content {
+    margin: 1.2rem 1.5rem;
+    color:var(--color-secondary-text);
+    line-height: 1.8rem;
+    font-weight: 100;
+}
+
+.topic-content ul {
+    margin-bottom: 3.2rem;
+}
+
+.topic-content ul li {
+    color: var( --color-content-list);
+    font-size: 18px;
+    line-height: 28px;
+    list-style-type: disc;
+}
+
+.recipe-ingredients {
+    margin-bottom: 12px;
+}
+
+.recipe-ingredients h1, .span {
+    display:inline-block;
+}
+
+.recipe-ingredients h1 {
+    line-height:3.8rem;
+    margin-right: 2rem;
+    font-size: 24px;
+
+}
+
+.recipe-preparation {
+    margin-bottom: 1.2rem;
+}
+
+.recipe-preparation h1, .span {
+    display:inline-block;
+}
+
+.recipe-preparation h1 {
+    color:var(--color-secondary);
+    font-size: 24px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.recipe-information h1, .span {
+    display: inline-block;
+}
+
+.recipe-information h1 {
+    color: var(--color-secondary);
+    font-size: 24px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.span {
     cursor: pointer;
-
+    color:var(--color-span);
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    align-content: center;
 }
 
+.hide {
+    display: none;
+}
 
+.show {
+    display: block;
+}

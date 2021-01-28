@@ -1,10 +1,9 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const { indexOf } = require('./data')
+const recipes = require("./data")
 
 const server = express()
-
-const recipes = require("./data")
 
 server.use(express.static('public'))
 server.use(express.static('images'))
@@ -34,35 +33,14 @@ server.get("/recipes", (req, res) => {
 server.get("/recipes/:index", (req, res) => {
     const { index: recipeIndex } = req.params
     const recipe = recipes[recipeIndex]
+    const receita = indexOf
 
     if(!recipe) {
-        return res.send("No Encontrado")
+        return res.send("Sitio No Encontrado")
     }
 
-    return res.render("recipe.njk", { items: recipe})
+    return res.render("recipe", { item: recipe})
 })
-
-/* server.get("/recipes/:index", (req, res) => {
-    const recipes = [];
-
-    const recipeIndex = req.params.index;
-    
-    const recipe = recipes.find((recipe) => {
-        if(recipes[recipeIndex] == recipeIndex) {
-            return true;
-        }
-    })
-
-    if(!recipes[recipeIndex]) {
-        return res.send("RECEITA NAO ENCONTRADA!")
-    }
-
-    console.log(recipes[recipeIndex]);
-
-    return res.render("recipes", {recipe: recipes[recipeIndex]})
-
-
-}) */
 
 server.get("/layout", (req,res) => {
     return res.render("layout")

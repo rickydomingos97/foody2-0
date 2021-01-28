@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --color-background: ffffff;
+    --color-background: #ffffff;
+    --color-content-list: #444444;
+    --color-span: #999999;
     --color-background-secondary: #FBDFDB ;
     --color-background-dark-mode: #191e24 ;
     --color-primary-text: #111111;
@@ -55,8 +57,6 @@ header {
 .links {
     
     text-align: center;
-    /* margin-inline-start: 14.7%; */
-    /* margin-right: 14.7%; */
 }
 
 .links a {
@@ -66,7 +66,6 @@ header {
     font-size: 16px;
     color: var(--color-primary-text);
     text-decoration: none;
-    /* margin-right: 20px; */
 }
 
 .links a:hover {
@@ -208,3 +207,4 @@ footer {
     padding: 100px 0;
     height: 100%;
 }
+
